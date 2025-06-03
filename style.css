@@ -1,168 +1,166 @@
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Outfit:wght@300;500;700&display=swap');
-
+/* General Resets and Fonts */
 body {
   margin: 0;
-  font-family: 'Outfit', sans-serif;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fffafc;
   color: #333;
-  background: url('images/peony-bg.jpg') no-repeat center center fixed;
-  background-size: cover;
-   background-color: #ffeef3; /* fallback in case image fails */
+  line-height: 1.6;
 }
 
-.hero {
-  padding: 100px 20px;
-  text-align: center;
-  background: linear-gradient(to bottom right, #ffe6e6cc, #fff0eacc);
-  position: relative;
-  overflow: hidden;
-}
-
-.confetti::after {
-  content: "🎉🎈✨";
-  position: absolute;
-  font-size: 5rem;
-  animation: float 5s infinite linear alternate;
-  opacity: 0.2;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-@keyframes float {
-  0% { top: -10%; }
-  100% { top: 110%; }
-}
-
-.title {
-  font-family: 'Great Vibes', cursive;
-  font-size: 3rem;
-  color: #d45a78;
-}
-
-.subtitle {
-  font-size: 1.2rem;
-  margin-top: 10px;
-}
-
-section {
-  max-width: 850px;
-  margin: 60px auto;
-  padding: 0 20px;
-}
-
-.letter p {
-  background: #fff8f2;
+.page-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
   padding: 20px;
-  border-left: 5px solid #ffc9b9;
-  font-style: italic;
-  border-radius: 8px;
-  line-height: 1.8;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  background: linear-gradient(to right, #f9dce2, #f3f0ff);
+  padding: 60px 20px;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  color: #a44470;
+  font-family: 'Georgia', serif;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Letter Section */
+.letter {
+  padding: 40px 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  margin: 40px 0;
+}
+
+.letter-content h2 {
+  color: #c45b7b;
+  font-family: 'Georgia', serif;
 }
 
 .signature {
-  display: block;
-  text-align: right;
-  margin-top: 15px;
-  font-family: 'Great Vibes', cursive;
-  font-size: 1.5rem;
-  color: #cc5c6b;
+  font-style: italic;
+  color: #a44470;
 }
 
-.timeline ul {
-  padding-left: 20px;
-  list-style: none;
+/* Childhood Photo */
+.childhood-photo {
+  text-align: center;
+  padding: 40px 20px;
 }
 
-.timeline li {
-  padding: 10px 0;
-  border-left: 3px solid #f5b0a5;
-  padding-left: 20px;
+.photo-frame {
+  display: inline-block;
+  padding: 10px;
+  border: 2px solid #f5cdd3;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  margin-bottom: 15px;
 }
 
-.gallery .polaroids {
+.photo-frame img {
+  max-width: 240px;
+  border-radius: 8px;
+}
+
+.photo-caption {
+  font-size: 1rem;
+  color: #a44470;
+  margin-top: 10px;
+}
+
+/* Gallery Section */
+.gallery {
+  padding: 60px 20px;
+  background: #fff6f8;
+}
+
+.gallery-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 15px;
+  gap: 25px;
 }
 
-.gallery img {
+.polaroid-frame {
+  background: #fff;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   width: 180px;
-  border: 10px solid white;
-  box-shadow: 2px 4px 10px rgba(0,0,0,0.1);
-  transform: rotate(-2deg);
-  transition: all 0.3s ease;
+  height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
-.gallery img:hover {
-  transform: rotate(0deg) scale(1.05);
-}
-
-.dream {
-  background: #f1fffa;
-  text-align: center;
-  padding: 30px;
-  border-radius: 10px;
-}
-
-.open-when details {
-  margin: 10px 0;
-  background: #fff2ee;
-  padding: 15px;
+.polaroid-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-radius: 8px;
-  cursor: pointer;
 }
 
-footer {
+.polaroid-frame:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.1);
+}
+
+/* Our Journey Section */
+.our-journey {
+  padding: 40px 20px;
+  background: #fef3f6;
+  border-radius: 10px;
+  margin: 40px 0;
+}
+
+/* Ending Quote */
+.ending-quote {
+  padding: 30px;
   text-align: center;
-  font-size: 0.9rem;
-  color: #aaa;
-  margin: 50px 0 30px;
+  background: #fceff1;
+  color: #a44470;
+  font-style: italic;
+  border-radius: 10px;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.05);
 }
 
+.ending-signature {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+/* Petal Animation Placeholder */
 .peony-petals {
   position: fixed;
-  pointer-events: none;
-  z-index: 0;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
 }
 
 .petal {
   position: absolute;
-  width: 60px;
-  opacity: 0.4;
-  animation: floatPetal 12s infinite ease-in-out;
+  width: 40px;
+  opacity: 0.6;
+  animation: fall 10s infinite;
 }
 
-.petal.one {
-  top: -50px;
-  left: 20%;
-  animation-delay: 0s;
-}
-.petal.two {
-  top: -80px;
-  left: 50%;
-  animation-delay: 4s;
-}
-.petal.three {
-  top: -60px;
-  left: 75%;
-  animation-delay: 2s;
-}
-
-@keyframes floatPetal {
+@keyframes fall {
   0% {
-    transform: translateY(0) rotate(0deg);
-    opacity: 0.3;
-  }
-  50% {
-    opacity: 0.7;
+    transform: translateY(-100px) rotate(0deg);
   }
   100% {
     transform: translateY(100vh) rotate(360deg);
-    opacity: 0;
   }
 }
